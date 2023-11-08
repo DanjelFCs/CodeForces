@@ -1,0 +1,15 @@
+t=int(input().split(" ")[1])
+s=input()
+n=len(s)
+for i in range(t):
+    s2=s
+    for j in range(n-1):
+        if s[j]== "B" and s[j+1]=="G":
+            
+            s2 = s2[:j+1] + "B" + s2[j+2:]
+            s2 = s2[:j] + "G" + s2[j+1:]
+        
+    
+    s=s2
+ 
+print(s)

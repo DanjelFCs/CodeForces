@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+    int n;
+    int t;
+    string s;
+    cin >> n >> t;
+    cin >> s;
+    string s2="";
+    for (int T=0; T<t;T++){
+        s2="";
+        for (int i=0; i<s.size(); i++){
+            if (s[i]=='B' && s[i+1]=='G'){
+                s2 = s2 + "GB";
+                i++;
+            }
+            else{
+                s2 = s2+s[i];
+            }
+        }
+        
+        s=s2;
+    }
+    cout << s;
+    
+    return 0;
+}
